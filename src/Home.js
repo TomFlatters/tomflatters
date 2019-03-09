@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import './App.css';
-
-import { Link } from 'react-router-dom';
+import { IoLogoLinkedin, IoLogoGithub, IoMdDocument, IoIosCode } from 'react-icons/io'
 
 class Home extends Component {
 
   render() {
+    if (window.location.href){
+      console.log(window.location.href.substr(window.location.href.lastIndexOf('/')));
+      var urlCheck = window.location.href.substr(window.location.href.lastIndexOf('/'));
+  }
     return (
 <div>
 
@@ -14,10 +18,11 @@ class Home extends Component {
           Tom Flatters
       </div>
         <div className="rowflex">
-           <div className="item">Projects</div>
-           <div className="item">GitHub</div>
-           <div className="item">LinkedIn</div>
-           <div className="item">CV</div>
+           <Link check={urlCheck} to="/sites"><li className="ls">Projects<IoIosCode size="2em" className="linkedin"/></li></Link>
+           <a href="https://www.linkedin.com/in/tom-flatters-a04521160/"><li className="ls"><IoLogoLinkedin size="2em" className="linkedin"/></li></a>
+           <a href="https://github.com/TomFlatters"><li className="ls"><IoLogoGithub size="2em" className="linkedin"/></li></a>
+           <li className="ls">CV<IoMdDocument size="2em" className="linkedin"/></li>
+           
         </div> 
       </div>
 

@@ -17,7 +17,12 @@ render(){
            <div className="header-title">
            <Link 
            style={{ textDecoration: 'none',
-           color: "black" }} 
+           color: "white",
+           fontWeight: 600,
+           background: "black",
+           borderRadius: "5%",
+           padding: "0.5vh 0.5vw"
+           }} 
            to="/">
            TF
            </Link></div>

@@ -7,6 +7,8 @@
   height: 100vh;
   max-height: 100vh;
   min-width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 @media only screen and (max-width: 600px) {
@@ -36,9 +38,11 @@ text-align: center;
 
 .main{
   font-family: 'Karla', sans-serif;
-   color: white;
+  color: white;
   height:100vh;
   width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -47,9 +51,11 @@ text-align: center;
 }
 .home{
   background-color: #2a2a2a;
+  animation: bg-fade 12s infinite;
 }
 .projects{
   background-color: #2A2A2A;
+  flex-direction: column;
 }
 
 .typewriter {
@@ -85,18 +91,25 @@ text-align: center;
   font-weight: 600
 }
 
-.item{
-  margin: 0 1vw;
-  cursor: pointer;
+
+.ls{
+  display: flex;
+  align-items: center;
+  list-style-type: none;
   animation: hide-text 1.3s;
+  margin: 0 1vw;
+  padding: 0;
+  cursor: pointer;
+  font-family: 'Montserrat', serif;
 }
-.item:hover{
-  border-bottom: 0.1em solid black;
+.ls:hover{
+  color: #0077B5;
   font-weight: 600;
   cursor: pointer;
 }
 
-.header{
+
+.header{ 
   width: 100vw;
   height: 5vh;
   padding: 1vh 0;
@@ -105,10 +118,10 @@ text-align: center;
   left:0;
   background-color: #ffffff;
   color: black;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: flex-start;
   animation: header-in 1s;
   z-index: 1;
@@ -124,67 +137,127 @@ text-align: center;
 .header-title{
   margin: 0 1.4vw;
   font-size: 1.5em;
+  font-family: 'Karla', serif;
 }
 
 .header-div:hover{
-  border-bottom: 0.1em solid black;
-  font-weight: 600;
+  color: #0077B5;
+   font-weight: 700;
   cursor: pointer;
 }
 
 #selected-header{
-  border-bottom: 0.1em solid black;
+  color: #0077B5;
   font-weight: 600;
+}
+
+.hide {
+  display: none;
 }
 
 .indproj{
   color: white;
-  padding: 3vh 2vw;
-  width: 30vw;
-  height: 55vh;
-  margin: 0 5vw;
+  padding: 3vh;
+  width: 95vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly
 }
 .indproj-image{
-  width: 30vw;
-  border: 5px solid black;
+  width: 40vw;
+  height: 40vh;
 }
 .indproj-desc{
+  max-width: 30vw;
   text-align: left;
   color: white;
-  margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 .indproj-title{
   text-align: left;
-  border-left: 0.5vw solid white;
   color: white;
-  padding: 0 0 0 1vw;
+  padding: 0 0 0 0;
   margin: 1vh 0;
 }
 .indproj-text{
   margin-top: 2vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
 }
 .indproj-tags{
+  align-self: left;
   padding: 1vh 1vw;
   color:black;
   background: white;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 30vw;
 }
 
 .project-scroll{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 100vw;
-  height: 70vh;
-  overflow-x: scroll;
+  max-width: 100vw;
+  overflow-x: hidden;
   padding: 0 0 3vh 0;
 }
+
 .project-text{
-  padding-top: 10vh;
+  font: 600;
+  font-size: 2em;
+  min-height: 97vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 0;
 }
+
+.pagetitle{
+  padding: 0 0;
+  margin: 0;
+  position: sticky;
+  top: 7vh;
+  display: flex;
+  align-items: center;
+}
+
+.nomargin{
+  margin: 0;
+  margin-bottom: 4vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.animateicon{
+  animation: icon 6s infinite
+}
+
+.linkedin:hover{
+  color: #0077B5;
+}
+.scroll-icon{
+ color: #0077B5;
+ 
+}
+.scroll-icon:hover{
+  color: white;
+}
+a{
+text-decoration: none;
+color: inherit;
+}
+
+/* customise scrollbar */
 
 /* width */
 ::-webkit-scrollbar {
   width: 20px;
+  position: absolute;
 }
 
 /* Track */
@@ -204,7 +277,20 @@ text-align: center;
 }
 
 /* animations */
-
+@keyframes icon {
+  from{color: white}
+  25%{color: #0077B5}
+  50%{color: white}
+  75%{color: #0077B5}
+  to{color: white}
+}
+@keyframes bg-fade {
+  from{background: #2A2A2A}
+  25%{background: #002e47}
+  50%{background: #2A2A2A}
+  75%{background: #002e47}
+  to{background: #2A2A2A}
+}
 
 @keyframes header-in {
   from { opacity: 1; width: 0vw;}
