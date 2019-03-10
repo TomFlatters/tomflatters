@@ -1,48 +1,23 @@
 .background{
   background-color: white;
   background-position: center;
+  position: absolute;
   top:0;
   background-size: cover;
   min-height: 100vh;
-  height: 100vh;
-  max-height: 100vh;
   min-width: 100vw;
-  max-width: 100vw;
+}
+body{
   overflow-x: hidden;
-}
-
-@media only screen and (max-width: 600px) {
-  .background {
-      background-position: center;
-      background-position-y: bottom;
-  }
-}
-
-
-.focusbox{
-position: absolute;
-height: 40vh;
-width: 37vw;
-margin: 15vh 31vw;
-background-color: white;
-animation: blocks 0.5s;
-color: #2A2A2A;
-text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 5px solid red;
-
 }
 
 .main{
   font-family: 'Karla', sans-serif;
   color: white;
-  height:100vh;
+  min-height:100vh;
   width: 100vw;
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -52,10 +27,20 @@ text-align: center;
 .home{
   background-color: #2a2a2a;
   animation: bg-fade 12s infinite;
+  max-width: 100vw;
 }
 .projects{
   background-color: #2A2A2A;
   flex-direction: column;
+  font-family: 'Karla', sans-serif;
+  color: white;
+  min-width: 100vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .typewriter {
@@ -113,7 +98,7 @@ text-align: center;
   width: 100vw;
   height: 5vh;
   padding: 1vh 0;
-  position: absolute;
+  position: sticky;
   top:0;
   left:0;
   background-color: #ffffff;
@@ -135,13 +120,13 @@ text-align: center;
   display: flex; 
   justify-content: flex-end;
   align-items: center;
-  margin-right: 1vw;
+  padding-right: 1vw;
 }
 .align-left{
   display: flex; 
   flex-direction: row;
   align-items: center;
-  margin-left: 1vw;
+  padding-left: 1vw;
 }
 
 .header-div{
@@ -172,7 +157,7 @@ text-align: center;
 .indproj{
   color: white;
   padding: 3vh;
-  width: 95vw;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -216,14 +201,13 @@ text-align: center;
   flex-direction: column;
   align-items: center;
   max-width: 100vw;
-  overflow-x: hidden;
   padding: 0 0 3vh 0;
 }
 
 .project-text{
-  font: 600;
   font-size: 2em;
-  min-height: 97vh;
+  min-height: 100vh;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -233,16 +217,15 @@ text-align: center;
 }
 
 .pagetitle{
+  z-index: 1;
   padding: 0 0;
   margin: 0;
   position: sticky;
-  top: 7vh;
+  top: 8vh;  
   display: flex;
   align-items: center;
-  background: #2A2A2A;
   justify-content: center;
-  overflow: hidden;
-  width: 98vw;
+  width: 100vw;
 }
 
 .nomargin{
@@ -274,24 +257,8 @@ color: inherit;
 
 /* width */
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 0;
   position: absolute;
-}
-
-/* Track */
-::-webkit-scrollbar-track { 
-  border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: white; 
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #00d800; 
 }
 
 /* animations */
@@ -312,7 +279,7 @@ color: inherit;
 
 @keyframes header-in {
   from { opacity: 1; width: 0vw;}
-  to { opacity: 1; }
+  to { opacity: 1;}
 }
 @keyframes text-in {
   from { opacity: 0; width: 0vw;}
