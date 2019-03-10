@@ -3,6 +3,8 @@ import './App.css';
 
 import { Link } from 'react-router-dom';
 
+import { IoLogoLinkedin, IoLogoGithub, IoMdDocument, IoIosCode } from 'react-icons/io'
+
 class Header extends Component{
 
 
@@ -14,6 +16,7 @@ render(){
     }
     return(
         <div className="header">
+            <div className="align-left">
            <div className="header-title">
            <Link 
            style={{ textDecoration: 'none',
@@ -29,7 +32,20 @@ render(){
            <LinkTo check={urlCheck} name="Home" link="/"/>
            <LinkTo check={urlCheck} name="Projects" link="/sites"/>
            <LinkTo check={urlCheck} name="Tutorials" link="/about"/>
-           <LinkTo check={urlCheck} name="Contact" link="/contact"/>
+           </div>
+
+           <div className="align-right">
+            <a href="https://www.linkedin.com/in/tom-flatters-a04521160/">
+                <div className="header-div">
+                    <IoLogoLinkedin size="2.5em" className="linkedin"/>
+                </div>
+            </a>
+            <a href="https://github.com/TomFlatters">
+                <div className="header-div">
+                    <IoLogoGithub size="2.5em" className="linkedin"/>
+                </div>
+            </a>
+            </div>
         </div>
     )
 }

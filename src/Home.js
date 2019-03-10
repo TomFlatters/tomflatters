@@ -15,7 +15,7 @@ class Home extends Component {
 
       <div className="main home">
         <div className="typewriter">
-          Tom Flatters
+          Hi, I'm Tom
       </div>
         <div className="rowflex">
            <Link check={urlCheck} to="/sites"><li className="ls">Projects<IoIosCode size="2em" className="linkedin"/></li></Link>

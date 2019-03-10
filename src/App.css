@@ -121,13 +121,27 @@ text-align: center;
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: row;
-  align-items: baseline;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
   animation: header-in 1s;
   z-index: 1;
   opacity: 1;
   font-weight: 600;
   font-size: 1em;
+}
+
+.align-right{
+  justify-self: flex-end;
+  display: flex; 
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 1vw;
+}
+.align-left{
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  margin-left: 1vw;
 }
 
 .header-div{
@@ -142,7 +156,7 @@ text-align: center;
 
 .header-div:hover{
   color: #0077B5;
-   font-weight: 700;
+   font-weight: 600;
   cursor: pointer;
 }
 
@@ -225,6 +239,10 @@ text-align: center;
   top: 7vh;
   display: flex;
   align-items: center;
+  background: #2A2A2A;
+  justify-content: center;
+  overflow: hidden;
+  width: 98vw;
 }
 
 .nomargin{
@@ -242,7 +260,7 @@ text-align: center;
 }
 .scroll-icon{
  color: #0077B5;
- 
+
 }
 .scroll-icon:hover{
   color: white;
