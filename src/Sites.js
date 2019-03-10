@@ -10,29 +10,14 @@ import ScrollIntoView from 'react-scroll-into-view'
 import $ from "jquery";
 
 class Sites extends Component{
-    constructor(){
-        super()
-        this.state=({
-            currentScrollHeight: 0
-        })
-    }
-
-    componentDidMount () {      
-        window.onscroll =()=>{
-            this.setState({currentScrollHeight: window.scrollY})
-       }
-     }
-
     render(){
-        const opacity = Math.min(10 / this.state.currentScrollHeight  , 1)
-
     return(
         <div className="main projects">
         <div className="project-scroll">
 
             <div className="project-text">
                 <h1 className="pagetitle">Projects<IoIosCode size="2em" className="animateicon"/></h1>
-                <h4 className={"nomargin"} style={{opacity: opacity}} id="subheader">Web, Mobile, Simulation</h4>
+                <h4 className={"nomargin"} id="subheader">Web, Mobile, Simulation</h4>
                 <ScrollIntoView selector="#projects">
                 <div id="icon">
                 <IoIosArrowDropdown size={"1.5em"} className="scroll-icon" style={{cursor: "pointer"}} />
