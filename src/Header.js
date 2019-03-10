@@ -3,10 +3,30 @@ import './App.css';
 
 import { Link } from 'react-router-dom';
 
-import { IoLogoLinkedin, IoLogoGithub, IoMdDocument, IoIosCode } from 'react-icons/io'
+import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io'
+import { MdMenu } from 'react-icons/md'
 
 class Header extends Component{
 
+    constructor(){
+        super()
+        this.state = ({
+            mobMenuOpen: false
+        })
+    }
+
+toggleMenu = () => {
+    console.log("mob menu toggle")
+    if (!this.state.mobMenuOpen){
+        document.getElementById("menu").classList = "mob-menu-open"
+    }
+    else {
+        document.getElementById("menu").classList = "mob-menu-closed"
+    }
+    this.setState({
+        mobMenuOpen: !this.state.mobMenuOpen
+    })
+}
 
 
 render(){
@@ -15,15 +35,17 @@ render(){
         var urlCheck = window.location.href.substr(window.location.href.lastIndexOf('/'));
     }
     return(
+        <div>
         <div className="header">
-            <div className="align-left">
+        {/* regular nav */}
+           <div className="align-left">
            <div className="header-title">
            <Link 
-           style={{ textDecoration: 'none',
+           style={{ 
+           textDecoration: 'none',
            color: "white",
            fontWeight: 600,
            background: "black",
-           borderRadius: "5%",
            padding: "0.5vh 0.5vw"
            }} 
            to="/">
@@ -46,7 +68,51 @@ render(){
                 </div>
             </a>
             </div>
+        
+        {/* mobile nav */}
+        <div className="mob-header-title">
+           <Link 
+           style={{ 
+           textDecoration: 'none',
+           color: "white",
+           background: "black",
+           fontWeight: 600,
+           padding: "1vw 1vw"
+           }} 
+           to="/">
+           TF
+           </Link>
         </div>
+        <div className="mob-menu">
+            <MdMenu size="2em" onClick={() => this.toggleMenu()} className="hamburger"/>
+        </div>
+        <div id="menu" className="mob-menu-closed">
+        <Link to="/">
+        <div className="mob-menu-item">Home</div>
+        </Link>
+        <Link to="/sites">
+        <div className="mob-menu-item">Projects</div>
+        </Link>
+        <div className="mob-menu-item mob-menu-icons">
+        <div>
+            <a href="https://github.com/TomFlatters">
+                <div className="header-div">
+                    <IoLogoGithub size="2em" className="linkedin"/>
+                </div>
+            </a>
+        </div>
+        <div><a href="https://www.linkedin.com/in/tom-flatters-a04521160/">
+                <div className="header-div">
+                    <IoLogoLinkedin size="2em" className="linkedin"/>
+                </div>
+            </a>
+        </div>
+        </div>
+     </div>
+        
+        </div>
+        
+     </div>
     )
 }
 

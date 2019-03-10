@@ -6,6 +6,7 @@
   background-size: cover;
   min-height: 100vh;
   min-width: 100vw;
+  max-width: 100%;
 }
 body{
   overflow-x: hidden;
@@ -16,7 +17,6 @@ body{
   color: white;
   min-height:100vh;
   width: 100vw;
-  max-width: 100vw;
   overflow: hidden;
   text-align: center;
   display: flex;
@@ -30,17 +30,17 @@ body{
   max-width: 100vw;
 }
 .projects{
+  min-width: 100vw;
+  max-width: 100vw;
   background-color: #2A2A2A;
   flex-direction: column;
   font-family: 'Karla', sans-serif;
   color: white;
-  min-width: 100vw;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 .typewriter {
@@ -48,20 +48,6 @@ body{
   font-weight: 600;
   font-family: 'Karla', sans-serif;
 }
-
-.enter{
-  font-family: 'Karla', sans-serif;
-  width: auto;
-  margin: 0.25em;
-  color: white;
-  font-size: 2em;
-}
-
-.enter:hover {
-  cursor: pointer;
-  font-weight: 600;
-}
-
 
 .rowflex {
   width: 30vw;
@@ -96,6 +82,7 @@ body{
 
 .header{ 
   width: 100vw;
+  max-width: 100vw;
   height: 5vh;
   padding: 1vh 0;
   position: sticky;
@@ -226,9 +213,12 @@ body{
   align-items: center;
   justify-content: center;
   width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
 }
 
 .nomargin{
+  max-width: 100vw;
   margin: 0;
   margin-bottom: 4vh;
   font-family: 'Montserrat', sans-serif;
@@ -251,6 +241,101 @@ body{
 a{
 text-decoration: none;
 color: inherit;
+}
+
+.mob-header-title,.mob-menu,.mob-menu-closed{
+  display: none
+}
+
+/* mobile */
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  body{
+    width: auto;
+  }
+  /* .align-right{
+    display: none;
+  } */
+  .indproj{
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .indproj-image{
+    width: 85%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .pagetitle{
+    font-size: 1.5em;
+  }
+  .typewriter{
+    font-size: 3em;
+    animation: none
+  }
+ .rowflex{
+    animation: hide-text-mob 0.8s
+  }
+
+  .projects, .project-text, .project-scroll, .indproj, .nomargin,.pagetitle,.rowflex{
+    width: auto;
+    min-width: auto;
+    max-width: auto;
+  }
+  .header{
+    animation: none;
+    width: auto;
+    min-width: auto;
+    max-width: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-title{
+    display: none
+  }
+  .align-right,.align-left{display: none;}
+
+  .mob-header-title{
+    display: flex;
+    font-size: 1.5em;
+    font-family: 'Karla', sans-serif;
+    padding-left: 5%
+  }
+  .mob-menu{
+    display: flex;
+    padding: 0 5% 0 0;
+    margin: 0;
+  }
+  .mob-menu-open{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: white;
+    top: 6.9vh;
+    height: 22vh;
+    width: 90vw;
+    padding:2vh 5vw;
+    font-size: 1.5em;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .mob-menu-item{
+  border-bottom: 2px solid #002e47;
+  padding: 1vh 0;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  }
+  .mob-menu-icons{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80vw
+  }
+
 }
 
 /* customise scrollbar */
@@ -282,12 +367,18 @@ color: inherit;
   to { opacity: 1;}
 }
 @keyframes text-in {
-  from { opacity: 0; width: 0vw;}
-  50% { opacity: 1; width: 0vw}
+  from { opacity: 0; width: 0;}
+  50% { opacity: 1; width: 0}
   to { opacity: 1;}
 }
+
 @keyframes hide-text {
   from { opacity:0; }
   80% { opacity: 0; }
   to { opacity: 1; }
+}
+
+@keyframes hide-text-mob {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
