@@ -63,7 +63,7 @@ class Sites extends Component{
                 <OxTranscribe />
 
 {/* CALC */}
-            <CalcBanner />
+                <CalcBanner />
 {/* SLASH BERLIN */}
 
 
