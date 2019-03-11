@@ -84,7 +84,8 @@ body{
   width: 100vw;
   max-width: 100vw;
   height: 5vh;
-  padding: 1vh 0;
+  padding: 1vh 0 1vh 0;
+  margin: 0;
   position: sticky;
   top:0;
   left:0;
@@ -145,10 +146,28 @@ body{
   color: white;
   padding: 3vh;
   width: 100vw;
+  min-height: 60vh;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly
+  justify-content: space-evenly;
+}
+.blue{
+  background: #002e47;
+}
+.light-blue{
+  background: #0077B5;
+}
+.snake{
+  color: white;
+  width: 100vw;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background: url(snake.png);
+  background-size: contain;
 }
 .indproj-image{
   width: 40vw;
@@ -159,20 +178,42 @@ body{
   text-align: left;
   color: white;
   padding: 0;
+  margin: 1vh 0 0 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.indproj-desc-right{
+  text-align: right;
+  max-width: 30vw;
+  color: white;
+  margin: 1vh 0 0 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.indproj-desc-snake{
+  max-width: 20vw;
+  text-align: left;
+  color: white;
+  padding: 0;
+  margin: 1vh 0 0 0;
   font-family: 'Montserrat', sans-serif;
 }
 .indproj-title{
   text-align: left;
   color: white;
-  padding: 0 0 0 0;
-  margin: 1vh 0;
+  padding: 0;
+  margin: 0;
 }
 .indproj-text{
-  margin-top: 2vh;
   width: 40vw;
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
+  align-items: flex-start;
+}
+.indproj-text-right{
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .indproj-tags{
   align-self: left;
@@ -180,7 +221,6 @@ body{
   color:black;
   background: white;
   font-family: 'Montserrat', sans-serif;
-  max-width: 30vw;
 }
 
 .project-scroll{
@@ -205,10 +245,10 @@ body{
 
 .pagetitle{
   z-index: 1;
-  padding: 0 0;
+  padding: 0;
   margin: 0;
   position: sticky;
-  top: 8vh;  
+  top: 0vh;  
   display: flex;
   align-items: center;
   justify-content: center;
