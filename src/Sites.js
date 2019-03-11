@@ -5,6 +5,7 @@ import IndProj from './IndividualProject'
 import OxHelp from './OxHelp'
 import OxTranscribe from './OxTranscribe'
 import Snake from './Snake'
+import CalcBanner from './CalcBanner'
 
 import { IoIosArrowDropdown, IoIosCode } from "react-icons/io";
 import ScrollIntoView from 'react-scroll-into-view'
@@ -61,7 +62,8 @@ class Sites extends Component{
 {/* OXTRANSCRIBE - a hackathon experiment that provides live lecture transcription with */}
                 <OxTranscribe />
 
-
+{/* CALC */}
+            <CalcBanner />
 {/* SLASH BERLIN */}
 
 
