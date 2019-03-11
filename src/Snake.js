@@ -7,7 +7,7 @@ class Snake extends Component{
 render(){
     return(
         <div className="snake ">
-            <div className="indproj-text">
+            <div className="indproj-text-snake">
             <h1 className="indproj-title">PyGame Snake</h1>
             <p className="indproj-desc-snake">
                 A simple Snake application using PyGame for Python.
