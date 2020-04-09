@@ -18,7 +18,7 @@ class Home extends Component {
           Hi, I'm Tom
       </div>
         <div className="rowflex">
-           <Link check={urlCheck} to="/sites"><li className="ls">Projects<IoIosCode size="2em" className="linkedin"/></li></Link>
+           <Link check={urlCheck} to="/projects"><li className="ls">Projects<IoIosCode size="2em" className="linkedin"/></li></Link>
            <a href="https://www.linkedin.com/in/tom-flatters-a04521160/"><li className="ls"><IoLogoLinkedin size="2em" className="linkedin"/></li></a>
            <a href="https://github.com/TomFlatters"><li className="ls"><IoLogoGithub size="2em" className="linkedin"/></li></a>
            <li className="ls">CV<IoMdDocument size="2em" className="linkedin"/></li>

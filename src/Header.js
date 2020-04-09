@@ -31,7 +31,6 @@ toggleMenu = () => {
 
 render(){
     if (window.location.href){
-        console.log(window.location.href.substr(window.location.href.lastIndexOf('/')));
         var urlCheck = window.location.href.substr(window.location.href.lastIndexOf('/'));
     }
     return(
@@ -51,9 +50,12 @@ render(){
            to="/">
            TF
            </Link></div>
+           
            <LinkTo check={urlCheck} name="Home" link="/"/>
-           <LinkTo check={urlCheck} name="Projects" link="/sites"/>
-           <LinkTo check={urlCheck} name="Tutorials" link="/about"/>
+           <LinkTo check={urlCheck} name="Experience" link="/experience"/>
+           <LinkTo check={urlCheck} name="Projects" link="/projects"/>
+           <LinkTo check={urlCheck} name="Learning" link="/learning"/>
+           <LinkTo check={urlCheck} name="Contact" link="/contact"/>
            </div>
 
            <div className="align-right">
@@ -90,8 +92,14 @@ render(){
         <Link to="/">
         <div className="mob-menu-item">Home</div>
         </Link>
-        <Link to="/sites">
+        <Link to="/experience">
+        <div className="mob-menu-item">Experience</div>
+        </Link>
+        <Link to="/projects">
         <div className="mob-menu-item">Projects</div>
+        </Link>
+        <Link to="/learning">
+        <div className="mob-menu-item">Learning</div>
         </Link>
         <div className="mob-menu-item mob-menu-icons">
         <div>
