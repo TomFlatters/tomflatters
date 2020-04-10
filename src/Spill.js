@@ -16,7 +16,7 @@ render(){
                 <h1 className="indproj-title">Spill</h1>
                 <p className="indproj-desc">
                     Spill is a startup that offers businesses counselling and therapy for their employees. 
-                    The next two panels highlight two of the projects I've worked on with Spill over the past 2 years.
+                    The next two panels outline projects I've worked on with Spill over the past 2 years.
                 </p>
                 {/* <span className="indproj-tags">
                     python, algolia, firebase, react, html, css, js, 
@@ -31,7 +31,7 @@ render(){
                     <div className="indproj-text-vert">
                         <h1 className="indproj-title">Google for Counsellors</h1>
                         <p className="indproj-desc">
-                            A search engine for counselling to find messages suitable for their clients. 
+                            A search engine for counsellors to find messages suitable for their clients. 
                             The user can filter by tags, style and type of message. 
                             Counsellors can upload their own snippets and see how many times they've been used.
                         </p>

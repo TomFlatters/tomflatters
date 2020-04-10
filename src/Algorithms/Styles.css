@@ -1,0 +1,34 @@
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.full{
+    /* width: 630px; */
+}
+.sort-item{
+    width: 21px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sort-container{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.graph-container{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.sort-graph-item{
+    /* border: 3px solid white; */
+    width: 21px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import IndProj from './IndividualProject'
-import OxHelp from './OxHelp'
-import OxTranscribe from './OxTranscribe'
+import Algorithms from './Algorithms/algorithms'
+
 import Snake from './Snake'
 import CalcBanner from './CalcBanner'
 
@@ -51,26 +50,19 @@ class Projects extends Component{
             <div>
 
             <div id="projects"> 
-                <OxHelp />
+                <CalcBanner />
             </div>    
 
 {/* SNAKE */}
                 <Snake />
 
-{/* OXTRANSCRIBE - a hackathon experiment that provides live lecture transcription with */}
-                <OxTranscribe />
-
 {/* CALC */}
-                <CalcBanner />
-{/* SLASH BERLIN */}
 
 
 {/* SIMULATION */}
 
-
-{/* MY APP */}
-
-
+{/* ALGORITHMS */}
+                <Algorithms/>
             </div>
             
         </div>

@@ -531,3 +531,7 @@ color: inherit;
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+.jpmorgan-img path{
+  fill:white !important;
+}

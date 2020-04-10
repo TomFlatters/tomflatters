@@ -9,6 +9,7 @@ import OxHelp from './OxHelp'
 import InsideUni from './InsideUni';
 import OxTranscribe from './OxTranscribe'
 import Spill from './Spill'
+import JPMorgan from './JPMorgan';
 
 
 
@@ -66,6 +67,7 @@ class Experience extends Component{
                 </div> 
                 <div> 
                     {/* JP Morgan */}
+                    <JPMorgan />
                 </div>     
                 <div> 
                     {/* OX1 */}

@@ -44,7 +44,7 @@ render(){
            textDecoration: 'none',
            color: "white",
            fontWeight: 600,
-           background: "black",
+           backgroundColor: "#0077B5",
            padding: "0.5vh 0.5vw"
            }} 
            to="/">
@@ -77,7 +77,7 @@ render(){
            style={{ 
            textDecoration: 'none',
            color: "white",
-           background: "black",
+           backgroundColor: "#0077B5",
            fontWeight: 600,
            padding: "1vw 1vw"
            }} 
